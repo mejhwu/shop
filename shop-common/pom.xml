@@ -15,6 +15,13 @@
     </parent>
     
     <dependencies>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+
         <!-- 时间操作组件 -->
         <dependency>
             <groupId>joda-time</groupId>
