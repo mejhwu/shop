@@ -2,6 +2,8 @@ package cn.mejhwu.shop.pojo;
 
 import org.joda.time.DateTime;
 
+import java.util.Date;
+
 /**
  * Created with IntelliJ IDEA.
  * User:   mejhwu
@@ -21,8 +23,8 @@ public class OrderShipping {
     private String receiverDistrict;
     private String receiverAddress;
     private String receiverZip;
-    private DateTime created;
-    private DateTime update;
+    private Date created;
+    private Date update;
 
     public String getOrderId() {
         return orderId;
@@ -96,19 +98,19 @@ public class OrderShipping {
         this.receiverZip = receiverZip;
     }
 
-    public DateTime getCreated() {
+    public Date getCreated() {
         return created;
     }
 
-    public void setCreated(DateTime created) {
+    public void setCreated(Date created) {
         this.created = created;
     }
 
-    public DateTime getUpdate() {
+    public Date getUpdate() {
         return update;
     }
 
-    public void setUpdate(DateTime update) {
+    public void setUpdate(Date update) {
         this.update = update;
     }
 

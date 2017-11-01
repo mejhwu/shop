@@ -1,6 +1,7 @@
 package cn.mejhwu.shop.dao;
 
 import cn.mejhwu.shop.pojo.Item;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
@@ -25,12 +26,20 @@ public interface ItemDao {
             "`barcode`, `image`, `cid`, `status`, `created`, `updated` ";
 
 
-    @Select({" SELECT ", SELECT_FILED, " FROM ",
-            TABLE_NAME, " LIMIT #{offset}, #{limit}"})
     List<Item> listItem(@Param("offset") long offset,
                         @Param("limit") long limit);
 
     @Select({" SELECT ", SELECT_FILED, " FROM ", TABLE_NAME,
             " WHERE `id`=#{id}"})
     Item getItemById(long id);
+
+    @Select({"SELECT COUNT(`id`) FROM ", TABLE_NAME})
+    long countItem();
+
+    @Insert({"INSERT", TABLE_NAME, "(", SELECT_FILED, ")  VALUE(" +
+                " #{id}, #{title}, #{sellPoint}, #{price}," +
+            " #{num}, #{barcode}, #{image}, #{cid}, " +
+            " #{status}, #{created}, #{updated} )" })
+    int saveItem(Item item);
+
 }

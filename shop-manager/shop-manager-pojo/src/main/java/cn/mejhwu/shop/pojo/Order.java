@@ -2,6 +2,8 @@ package cn.mejhwu.shop.pojo;
 
 import org.joda.time.DateTime;
 
+import java.util.Date;
+
 /**
  * Created with IntelliJ IDEA.
  * User:   mejhwu
@@ -17,12 +19,12 @@ public class Order {
     private int paymentType;
     private String postFee;
     private int status;
-    private DateTime createTime;
-    private DateTime updateTime;
-    private DateTime paymentTime;
-    private DateTime consignTime;
-    private DateTime endTime;
-    private DateTime closeTime;
+    private Date createTime;
+    private Date updateTime;
+    private Date paymentTime;
+    private Date consignTime;
+    private Date endTime;
+    private Date closeTime;
     private String shippingName;
     private String shippintCode;
     private long userId;
@@ -70,51 +72,51 @@ public class Order {
         this.status = status;
     }
 
-    public DateTime getCreateTime() {
+    public Date getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(DateTime createTime) {
+    public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
 
-    public DateTime getUpdateTime() {
+    public Date getUpdateTime() {
         return updateTime;
     }
 
-    public void setUpdateTime(DateTime updateTime) {
+    public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
 
-    public DateTime getPaymentTime() {
+    public Date getPaymentTime() {
         return paymentTime;
     }
 
-    public void setPaymentTime(DateTime paymentTime) {
+    public void setPaymentTime(Date paymentTime) {
         this.paymentTime = paymentTime;
     }
 
-    public DateTime getConsignTime() {
+    public Date getConsignTime() {
         return consignTime;
     }
 
-    public void setConsignTime(DateTime consignTime) {
+    public void setConsignTime(Date consignTime) {
         this.consignTime = consignTime;
     }
 
-    public DateTime getEndTime() {
+    public Date getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(DateTime endTime) {
+    public void setEndTime(Date endTime) {
         this.endTime = endTime;
     }
 
-    public DateTime getCloseTime() {
+    public Date getCloseTime() {
         return closeTime;
     }
 
-    public void setCloseTime(DateTime closeTime) {
+    public void setCloseTime(Date closeTime) {
         this.closeTime = closeTime;
     }
 

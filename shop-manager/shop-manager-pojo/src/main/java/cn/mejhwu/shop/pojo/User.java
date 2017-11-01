@@ -2,6 +2,8 @@ package cn.mejhwu.shop.pojo;
 
 import org.joda.time.DateTime;
 
+import java.util.Date;
+
 /**
  * Created with IntelliJ IDEA.
  * User:   mejhwu
@@ -17,8 +19,8 @@ public class User {
     private String password;
     private String phone;
     private String email;
-    private DateTime created;
-    private DateTime updated;
+    private Date created;
+    private Date updated;
 
     public long getId() {
         return id;
@@ -60,19 +62,19 @@ public class User {
         this.email = email;
     }
 
-    public DateTime getCreated() {
+    public Date getCreated() {
         return created;
     }
 
-    public void setCreated(DateTime created) {
+    public void setCreated(Date created) {
         this.created = created;
     }
 
-    public DateTime getUpdated() {
+    public Date getUpdated() {
         return updated;
     }
 
-    public void setUpdated(DateTime updated) {
+    public void setUpdated(Date updated) {
         this.updated = updated;
     }
 

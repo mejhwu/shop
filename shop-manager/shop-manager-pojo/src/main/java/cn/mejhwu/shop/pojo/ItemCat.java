@@ -2,6 +2,8 @@ package cn.mejhwu.shop.pojo;
 
 import org.joda.time.DateTime;
 
+import java.util.Date;
+
 /**
  * Created with IntelliJ IDEA.
  * User:   mejhwu
@@ -17,9 +19,9 @@ public class ItemCat {
     private String name;
     private int status;
     private int sortOrder;
-    private int parent;
-    private DateTime created;
-    private DateTime updated;
+    private int isParent;
+    private Date created;
+    private Date updated;
 
     public long getId() {
         return id;
@@ -61,27 +63,27 @@ public class ItemCat {
         this.sortOrder = sortOrder;
     }
 
-    public int getParent() {
-        return parent;
+    public int getIsParent() {
+        return isParent;
     }
 
-    public void setParent(int parent) {
-        this.parent = parent;
+    public void setIsParent(int isParent) {
+        this.isParent = isParent;
     }
 
-    public DateTime getCreated() {
+    public Date getCreated() {
         return created;
     }
 
-    public void setCreated(DateTime created) {
+    public void setCreated(Date created) {
         this.created = created;
     }
 
-    public DateTime getUpdated() {
+    public Date getUpdated() {
         return updated;
     }
 
-    public void setUpdated(DateTime updated) {
+    public void setUpdated(Date updated) {
         this.updated = updated;
     }
 
@@ -93,7 +95,7 @@ public class ItemCat {
                 ", name='" + name + '\'' +
                 ", status=" + status +
                 ", sortOrder=" + sortOrder +
-                ", parent=" + parent +
+                ", isParent=" + isParent +
                 ", created=" + created +
                 ", updated=" + updated +
                 '}';
